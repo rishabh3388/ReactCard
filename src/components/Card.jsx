@@ -23,28 +23,28 @@ function Card() {
       description: "Twitter is a social media platform.",
     }
   ];
+
   return (
-    <>
-      <div className="w-full h-screen bg-zinc-300 flex justify-center items-center gap-10">
-        {data.map((val,index)=>(
-          <div className="w-52 rounded-md bg-zinc-200  overflow-hidden">
-          <div className="w-full h-32 bg-zinc-400">
+    <div className="w-full min-h-screen bg-zinc-300 flex flex-wrap justify-center items-center gap-6 p-4">
+      {data.map((val, index) => (
+        <div
+          key={index}
+          className="w-full sm:w-52 rounded-md bg-zinc-200 overflow-hidden shadow-md"
+        >
+          <div className="w-full h-40 sm:h-32 bg-zinc-400">
             <img
-              className=" w-full h-full object-cover"
+              className="w-full h-full object-cover"
               src={val.image}
-              alt=""
+              alt={val.title}
             />
           </div>
-          <div className="w-full px-3 py-4 bg-white">
-            <h2 className="font-semibold">{val.title}</h2>
-            <p className="text-sm mt-3">
-              {val.description}
-            </p>
+          <div className="w-full px-4 py-4 bg-white">
+            <h2 className="font-semibold text-lg">{val.title}</h2>
+            <p className="text-sm mt-2 text-gray-600">{val.description}</p>
           </div>
         </div>
-        ))}
-      </div>
-    </>
+      ))}
+    </div>
   );
 }
 
