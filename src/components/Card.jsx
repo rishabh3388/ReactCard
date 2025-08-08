@@ -3,7 +3,7 @@ import React from "react";
 function Card() {
   const data = [
     {
-      image: "image.png",
+      image: "img1.png",
       title: "Amazon",
       description: "Amazon is a cloud computing company.",
     },
